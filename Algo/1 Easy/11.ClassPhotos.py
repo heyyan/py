@@ -16,8 +16,8 @@ def photo(red, blue):
     return True
 
 def classPhotos(redShirtHeights, blueShirtHeights):
-    redShirtHeights.sort(reversed=True)
-    blueShirtHeights.sort(reversed=True)
+    redShirtHeights.sort(reverse=True)
+    blueShirtHeights.sort(reverse=True)
     shirtColorInFirstRow = 'RED' if redShirtHeights[0] < blueShirtHeights[0] else 'BLUE'  
     for idx in range(len(redShirtHeights)):
         redHeight = redShirtHeights[idx]
@@ -30,5 +30,5 @@ def classPhotos(redShirtHeights, blueShirtHeights):
                 return False    
     return True  
 
-result = photo([5, 8, 1, 3, 4], [6, 9, 2, 4, 5])
+result = classPhotos([5, 8, 1, 3, 4], [6, 9, 2, 4, 5])
 print(result)  # Output: True   
